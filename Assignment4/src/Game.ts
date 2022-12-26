@@ -42,7 +42,7 @@ public onload(){
     arrow.width=50;
     arrow.height=65;
     this.stage.addChild(wheel);
-    this.stage.addChild(arrow);
+    this.stage.addChild(arrow); 
     wheel.interactive=true;
     wheel.buttonMode=true;
     wheel.on("pointerup",()=>{
@@ -56,7 +56,10 @@ public onload(){
                 c.visible=true;
                 console.log("Jackpot");
               }
-            },6000)
+              setTimeout(() => {
+                c.visible=false;
+              }, 1000);
+            },7000)
     })
 
   const c = new Container();
